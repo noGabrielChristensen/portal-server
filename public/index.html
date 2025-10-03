@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mega App</title>
+</head>
+<body>
+  <h1>Create a Profile</h1>
+  <form id="create-profile">
+    Name: <input type="text" id="name">
+    <button type="submit">Add Profile</button>
+  </form>
+
+  <h2>All Profiles</h2>
+  <div id="profiles-list"></div>
+
+  <!-- Connect your Supabase client -->
+  <script src="supabase.js"></script>
+  <!-- Your custom logic to fetch/add profiles -->
+  <script src="main.js"></script>
+</body>
+</html>
