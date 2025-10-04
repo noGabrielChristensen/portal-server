@@ -3,25 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grove Portal 🌌</title>
-
-  <!-- Link to your CSS inside Public/ -->
-  <link rel="stylesheet" href="Public/style.css">
-
-  <!-- Link to your Supabase script inside Public/ -->
-  <script type="module" src="Public/script.js"></script>
+  <title>Grove Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="script.js"></script>
 </head>
 <body>
-  <h1>Welcome to Grove Portal 🌌</h1>
+  <div class="container">
+    <h1>Welcome to Grove Portal 🌌</h1>
 
-  <h2>Create Account</h2>
-  <input id="signupEmail" placeholder="Email" />
-  <input id="signupPassword" type="password" placeholder="Password" />
-  <button onclick="signUp(signupEmail.value, signupPassword.value)">Sign Up</button>
+    <div class="form-container">
+      <h2>Create Account</h2>
+      <input type="email" id="signup-email" placeholder="Email">
+      <input type="password" id="signup-password" placeholder="Password">
+      <button id="signup-btn">Sign Up</button>
+    </div>
 
-  <h2>Login</h2>
-  <input id="loginEmail" placeholder="Email" />
-  <input id="loginPassword" type="password" placeholder="Password" />
-  <button onclick="login(loginEmail.value, loginPassword.value)">Login</button>
+    <div class="form-container">
+      <h2>Login</h2>
+      <input type="email" id="login-email" placeholder="Email">
+      <input type="password" id="login-password" placeholder="Password">
+      <button id="login-btn">Login</button>
+    </div>
+  </div>
 </body>
 </html>
