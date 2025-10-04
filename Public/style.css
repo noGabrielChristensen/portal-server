@@ -1,4 +1,4 @@
-/* Reset some default styles */
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,32 +12,42 @@ body {
   color: #ffffff;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 20px;
 }
 
-/* Header */
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+/* Portal card container */
+.portal-card {
+  background: rgba(15, 12, 41, 0.85);
+  border-radius: 20px;
+  padding: 40px 60px;
+  box-shadow: 0 0 30px rgba(255, 204, 0, 0.6);
   text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Header */
+.portal-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
   color: #ffcc00;
   text-shadow: 2px 2px 8px #000;
 }
 
 /* Sections */
-h2 {
-  margin-top: 30px;
+.portal-card h2 {
+  margin-top: 25px;
   margin-bottom: 10px;
   color: #ffea00;
   text-shadow: 1px 1px 5px #000;
 }
 
 /* Inputs */
-input {
+.portal-card input {
   display: block;
-  width: 250px;
+  width: 100%;
   padding: 10px 15px;
   margin-bottom: 15px;
   border: none;
@@ -46,9 +56,9 @@ input {
 }
 
 /* Buttons */
-button {
+.portal-card button {
   padding: 10px 20px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border: none;
   border-radius: 8px;
   background: #ffcc00;
@@ -58,17 +68,16 @@ button {
   transition: all 0.2s ease;
 }
 
-button:hover {
+.portal-card button:hover {
   background: #ffd633;
   transform: scale(1.05);
 }
 
-/* Optional: add some glow effect */
-button:active {
+.portal-card button:active {
   box-shadow: 0 0 10px #ffcc00;
 }
 
-/* On-screen log (if you add mobile logging) */
+/* Optional mobile log */
 #log {
   position: fixed;
   bottom: 0;
