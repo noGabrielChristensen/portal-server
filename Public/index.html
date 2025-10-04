@@ -1,31 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grove Portal</title>
-  <link rel="stylesheet" href="style.css">
+  <script type="module" src="script.js"></script>
 </head>
 <body>
-  <h1>Welcome to Grove Portal</h1>
-
-  <canvas id="nebula-canvas"></canvas>
-
-  <section id="signup-section">
-    <h2>Sign Up</h2>
-    <input type="email" id="signup-email" placeholder="Enter your email">
-    <input type="password" id="signup-password" placeholder="Enter your password">
-    <button id="signup-btn">Sign Up</button>
-  </section>
-
-  <section id="login-section">
-    <h2>Login</h2>
-    <input type="email" id="login-email" placeholder="Enter your email">
-    <input type="password" id="login-password" placeholder="Enter your password">
-    <button id="login-btn">Login</button>
-  </section>
-
-  <script src="bg.js"></script>
-  <script src="script.js"></script>
+  <h1>Welcome to Grove</h1>
+  <button onclick="login()">Login with Supabase</button>
 </body>
 </html>
