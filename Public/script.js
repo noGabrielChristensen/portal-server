@@ -1,26 +1,29 @@
-// Public/script.js
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
-const supabaseUrl = 'YOUR_SUPABASE_URL'       // replace with your Supabase URL
-const supabaseKey = 'YOUR_SUPABASE_ANON_KEY'  // replace with your Supabase anon key
+const supabaseUrl = 'YOUR_SUPABASE_URL'       // replace this
+const supabaseKey = 'YOUR_SUPABASE_ANON_KEY'  // replace this
 const supabase = createClient(supabaseUrl, supabaseKey)
 
-console.log('Supabase client created:', supabase)
-
-// Sign Up function
+// Sign Up
 async function signUp(email, password) {
   const { data, error } = await supabase.auth.signUp({ email, password })
-  console.log('Sign Up Data:', data)
-  console.log('Sign Up Error:', error)
+  if (error) {
+    alert('Sign Up Error: ' + error.message)
+  } else {
+    alert('Sign Up Success! Check Supabase profiles table.')
+  }
 }
 
-// Login function
+// Login
 async function login(email, password) {
   const { data, error } = await supabase.auth.signInWithPassword({ email, password })
-  console.log('Login Data:', data)
-  console.log('Login Error:', error)
+  if (error) {
+    alert('Login Error: ' + error.message)
+  } else {
+    alert('Login Success!')
+  }
 }
 
-// Make functions globally accessible so buttons in HTML can use them
+// Connect buttons
 window.signUp = signUp
 window.login = login
