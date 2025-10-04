@@ -15,13 +15,13 @@ for (let i = 0; i < particleCount; i++) {
     radius: Math.random() * 2 + 1,
     speedX: (Math.random() - 0.5) * 0.3,
     speedY: (Math.random() - 0.5) * 0.3,
-    color: `rgba(255, ${Math.floor(Math.random() * 100 + 150)}, 0, 0.8)` // soft orange/yellow
+    color: `rgba(255, ${Math.floor(Math.random() * 100 + 150)}, 0, 0.8)`
   });
 }
 
 // Draw nebula particles
 function animate() {
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.2)'; // fading trails
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
   ctx.fillRect(0, 0, width, height);
 
   particles.forEach(p => {
